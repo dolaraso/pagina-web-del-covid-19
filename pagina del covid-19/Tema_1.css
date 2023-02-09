@@ -1,0 +1,135 @@
+.barra_2{
+
+    width: 100%;
+    height: auto;
+
+    background-image: linear-gradient(to right bottom, #30cfd0  , #120867 );
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 7vmax;
+    font-size: 3vmax;
+
+    border-bottom: 2px solid rgb(4, 116, 221);
+}
+
+.menu{
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: rgb(34, 1, 97);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    margin-bottom: 30px;
+}
+.opciones{
+
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 130px;
+    flex-grow: 1;
+
+    margin: 10px 40px 10px 40px;
+
+    border-radius: 20px;
+    background-color: rgb(3, 80, 151);
+
+    transition: .3s; /* Propiedad relacionada con interactividad */
+}
+
+.fondoTema1{
+
+    width: 100%;
+    height: auto;
+
+    background-image: url(fotos_barra_2/Naturaleza.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caja_info_Tema1{
+    display: grid;
+
+    width: 95%;
+
+    grid-template-columns: repeat(2, minmax(100px, auto));
+    grid-template-rows: repeat(2, auto);
+    grid-auto-rows: auto;
+
+   column-gap: 40px;
+   row-gap: 20px;
+}
+
+.info_Tema_1{
+    height: auto;
+
+    padding: 10px 20px 10px 20px;
+
+    line-height: 25px;
+
+    background-image: linear-gradient(to bottom right, rgba(0, 153, 255, 0.568), rgb(0, 0, 0));
+    border-radius: 20px;
+    border: 2px solid rgb(0, 183, 255);
+}
+.info_Tema_1:nth-of-type(3){
+    grid-column: 1/3;
+}
+
+.info_Tema_1 h2{
+    margin-bottom: 20px;
+}
+.info_Tema_1 p{
+    text-align: justify;
+}
+
+.fotoTema_1{
+    float: right;
+    background-color: rgba(1, 100, 167, 0.568);
+
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* MEDIA QUERY A 730 PX, grid */
+
+@media screen and (max-width:730px){
+    .info_Tema_1:nth-of-type(2), .info_Tema_1:nth-of-type(1){
+        grid-column: 1/3;
+    }
+    .fondoTema1{
+        background-image: none;
+        background-color: rgb(54, 128, 131);
+    }
+}
+
+/* DINÁMICO */
+.opciones:hover{
+    transition: .3s;
+    background-color: rgb(1, 97, 187);
+}

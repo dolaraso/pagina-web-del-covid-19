@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja_info_redes,.caja_info,.caja_redes{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.barra_1{
+
+    width: 100%;
+    height: auto;
+
+    background-color:  rgb(9, 40, 90);
+    border-bottom:  rgb(4, 116, 221) 2px solid;
+}
+
+.des_logo{
+    width:  auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+
+.logo{
+
+    width: 100px;
+    height: 100px;
+
+    margin: 5px 0px 5px 40px;
+
+    border: 2px solid rgb(4, 116, 221); 
+    border-radius: 50%;
+}
+.descripcionPag{
+    max-width: 800px;
+    height: auto;
+
+    margin-left: 20px;
+
+    color: white;
+
+    text-align: justify;
+
+}
+.descripcionPag b{
+    font-size: 18px;
+    color: rgb(0, 183, 255);
+}
+
+.info,.redes,.infoPag{
+
+    height: auto;
+    transition: .3s; /* Propiedad relacionada con interactividad */
+}
+
+.redes{
+    margin: 0px 5px 0px 5px;
+}
+.info{
+
+    width: auto;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 20px 5px 20px;
+    margin: 0px 10px 0px 10px;
+
+    background-color: rgb(4, 116, 221);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.fondoGrande{
+
+    width: 100%;
+    height: 90vh;
+
+    background-image: url(fotos_barra_1/un-eden-remoto_a8e2f1ce_1254x837.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_principal,.subtitulo_principal{
+
+    color: white;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.titulo_principal{
+    font-size: 5vmax;
+    margin-bottom: 25px;
+}
+.subtitulo_principal{
+    font-size: 2.5vmax;
+    margin-top: 25px;
+    border-bottom:  5px solid rgb(4, 116, 221);
+}
+
+/* INTERACTIVIDAD */
+
+.info:hover{
+
+    transition: .3s;
+    background-color: rgb(125, 169, 209);
+}
+.redes:hover{
+    transition: .3s;
+    transform: scale(1.5);
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 990px){
+    .des_logo{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo, .descripcionPag{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
