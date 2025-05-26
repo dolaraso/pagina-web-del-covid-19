@@ -1,0 +1,134 @@
+.barra_5 {
+    width: 100%;
+    height: 7vmax;
+    background-image: linear-gradient(to right bottom, #252627, #6b1111);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmax;
+    border-bottom: 2px solid rgb(228, 6, 6);
+}
+
+.fondoTema4 {
+    width: 100%;
+    height: auto;
+    background-image: url(fotos_barra_4/covid.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 40px 0px 40px 0px;
+}
+
+/* Contenedor principal */
+.box {
+    width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Estilos para los contenedores de información */
+.b1_t4, .b2_t4, .b3_t4 {
+    line-height: 25px;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.918), rgba(65, 2, 2, 0.918));
+    border: solid 2px red;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos de las secciones */
+.titulo_T4 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    border-bottom: 2px solid rgb(228, 6, 6);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Estilos para las listas */
+.b1_t4 ul, .b2_t4 ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.b1_t4 li, .b2_t4 li {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-left: 4px solid rgb(228, 6, 6);
+    border-radius: 5px;
+}
+
+/* Imagen de estadísticas */
+.fotoEstadisticas {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px solid rgb(228, 6, 6);
+}
+
+/* Textos y párrafos */
+.b1_t4 p, .b2_t4 p, .b3_t4 p {
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* Ajuste del tercer contenedor */
+.b3_t4 {
+    grid-column: 1 / -1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+    .box {
+        grid-template-columns: 1fr;
+    }
+
+    .b1_t4, .b2_t4, .b3_t4 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo_T4 {
+        font-size: 1.5em;
+    }
+
+    .b1_t4, .b2_t4, .b3_t4 {
+        padding: 20px;
+    }
+
+    .fotoEstadisticas {
+        width: 100%;
+    }
+
+    .barra_5 {
+        font-size: 2.5vmax;
+    }
+}
+
+/* Efectos hover */
+.b1_t4:hover, .b2_t4:hover, .b3_t4:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(228, 6, 6, 0.3);
+}
+
+/* Animación para los elementos de la lista */
+.b1_t4 li:hover, .b2_t4 li:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
